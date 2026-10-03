@@ -11,7 +11,7 @@ export default extensions.customElement({
     defaultHeight: 420
   },
   installation: {
-    autoAdd: true
+    autoAdd: false
   },
   presets: [
     {
