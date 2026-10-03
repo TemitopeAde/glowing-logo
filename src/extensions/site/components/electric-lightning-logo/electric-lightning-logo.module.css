@@ -1,0 +1,73 @@
+.root {
+  --display: block;
+  --core-color: #ecc7ff;
+  --glow-color: #ad6dff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #0b0614;
+  border-radius: 12px;
+  pointer-events: auto;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+.playButton:global(.electric-lightning-logo-play-button--hover),
+.playButton:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.playButton {
+  --icon-size: 18px;
+  --icon-color: #ffffff;
+  position: absolute;
+  inset-inline-end: 12px;
+  inset-block-end: 12px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  background-color: rgba(11, 6, 20, 0.6);
+  color: var(--icon-color);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.2s ease;
+}
+
+.playButton:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.icon {
+  inline-size: var(--icon-size);
+  block-size: var(--icon-size);
+  fill: currentColor;
+}
+
+/* Behavior-only visibility: reveal the control on hover (see ANIMATED-COMPONENTS). */
+.root[data-pause-button-visibility='showOnHover'] .playButton {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.root[data-pause-button-visibility='showOnHover']:hover .playButton,
+.root[data-pause-button-visibility='showOnHover']:focus-within .playButton {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fallbackDirection:not([dir]) {
+  direction: var(--wix-opt-in-direction);
+}

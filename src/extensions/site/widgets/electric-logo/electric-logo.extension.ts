@@ -4,11 +4,11 @@ export default extensions.customElement({
   id: 'a22c84c4-981e-491b-82eb-703b07e9423b',
   name: 'Electric Logo',
   width: {
-    defaultWidth: 450,
+    defaultWidth: 600,
     allowStretch: true
   },
   height: {
-    defaultHeight: 250
+    defaultHeight: 420
   },
   installation: {
     autoAdd: true
